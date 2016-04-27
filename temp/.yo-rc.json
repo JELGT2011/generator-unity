@@ -1,0 +1,6 @@
+{
+  "generator-unity": {
+    "projectname": "MyProject",
+    "baseclassname": "MyProjectBehavior"
+  }
+}

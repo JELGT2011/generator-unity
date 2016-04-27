@@ -8,34 +8,39 @@ module.exports = yeoman.Base.extend({
   prompting: function () {
     var done = this.async();
 
-    // Have Yeoman greet the user.
     this.log(yosay(
       'Welcome to the polished ' + chalk.red('generator-unity') + ' generator!'
     ));
 
-    var prompts = [{
-      type: 'confirm',
-      name: 'someAnswer',
-      message: 'Would you like to enable this option?',
-      default: true
-    }];
+    var prompts = [
+      {
+        type: 'input',
+        name: 'projectname',
+        message: 'What is the name of your project? (e.g. MyProject)',
+      },
+      {
+        type: 'input',
+        name: 'baseclassname',
+        message: 'Base class name? (e.g. MyProjectBehavior)',
+      }
+    ];
 
     this.prompt(prompts, function (props) {
       this.props = props;
-      // To access props later use this.props.someAnswer;
-
       done();
     }.bind(this));
   },
 
-  writing: function () {
-    this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
-    );
+  config: function () {
+    this.config.set('projectname', this.props.projectname);
+    this.config.set('baseclassname', this.props.baseclassname);
   },
 
-  install: function () {
-    this.installDependencies();
-  }
+  writing: function () {
+    // this.fs.copy(
+    //   this.templatePath('dummyfile.txt'),
+    //   this.destinationPath('dummyfile.txt')
+    // );
+  },
+
 });

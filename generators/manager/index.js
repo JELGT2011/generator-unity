@@ -8,11 +8,6 @@ module.exports = yeoman.Base.extend({
   prompting: function () {
     var done = this.async();
 
-    // Have Yeoman greet the user.
-    this.log(yosay(
-      'Welcome to the majestic ' + chalk.red('generator-unity') + ' generator!'
-    ));
-
     var prompts = [{
       type: 'confirm',
       name: 'someAnswer',
@@ -22,8 +17,6 @@ module.exports = yeoman.Base.extend({
 
     this.prompt(prompts, function (props) {
       this.props = props;
-      // To access props later use this.props.someAnswer;
-
       done();
     }.bind(this));
   },
@@ -35,7 +28,4 @@ module.exports = yeoman.Base.extend({
     );
   },
 
-  install: function () {
-    this.installDependencies();
-  }
 });
