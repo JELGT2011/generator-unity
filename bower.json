@@ -1,0 +1,27 @@
+{
+  "name": "generator-unity",
+  "description": "",
+  "main": "generators/app/index.js",
+  "authors": [
+    "Jason Libbey"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "unity",
+    "unity3d",
+    "yeoman",
+    "yeoman-generator",
+    "generator-unity"
+  ],
+  "homepage": "https://github.com/JELGT2011/generator-unity",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "UnityTemplate": "git://github.com/JELGT2011/UnityTemplate.git"
+  }
+}

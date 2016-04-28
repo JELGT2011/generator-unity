@@ -5,7 +5,7 @@
 .temp
 
 
-# Created by https://www.gitignore.io/api/windows,linux,osx,node,intellij
+# Created by https://www.gitignore.io/api/windows,linux,osx,node,intellij,bower
 
 ### Windows ###
 # Windows image file caches
@@ -154,3 +154,9 @@ fabric.properties
 
 ### Intellij Patch ###
 *.iml
+
+### Bower ###
+bower_components
+.bower-cache
+.bower-registry
+.bower-tmp
