@@ -13,15 +13,55 @@ npm install -g generator-unity
 Then generate your new project:
 
 ```bash
+mkdir MyAwesomeProject && cd $_
 yo unity
 ```
 
-## Getting To Know Yeoman
+## Usage
 
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
+List of subgenerators:
+ * [app](#app)
+ * [class](#class)
+ * [service](#service)
+ * [entity](#entity)
+ * [UI](#UI)
+
+### app
+
+This is the main generator.  
+
+### class
+
+This generates a new class, which can be of type:
+ * [service](#service) (this will add it to the namespace and folder `MyAwesomeProject.Assets.Scripts.Services`)
+ * [entity](#entity) (this will add it to the namespace and folder `MyAwesomeProject.Assets.Scripts.Entities`)
+ * [UI](#UI) (this will add it to the namespace and folder `MyAwesomeProject.Assets.Scripts.UI`)
+
+### service
+
+A service is a globally available class that all [entities](#entity) have a `protected` reference to via `Services.MyServiceName`.  The default services include:
+ * [GameStateService](#GameStateService)
+ * [InputService](#InputService)
+ * [GlobalServices](#GlobalServices)
+
+### entity
+
+An entity is attached to a `GameObject` that players can interact with (e.g. a weapon, enemy, etc).  You should ALWAYS inherit from this class, and you should NOT use the default `Update`, and `FixedUpdate` functions.  Instead, use the inherited `OnUpdate`, and `OnFixedUpdate`.  Additionally functions included:
+ * OnTouchBegan
+ * OnTouchCanceled
+ * OnTouchMoved
+ * OnTouchEnded
+ * OnTouchStationary
+ * OnEnable (must make call to super)
+ * OnDisable (must make call to super)
+ * OnUpdate
+ * OnFixedUpdate
+ * OnPause
+ * OnResume
+
+### UI
+
+
 
 ## License
 
