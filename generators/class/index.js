@@ -13,12 +13,12 @@ module.exports = yeoman.Base.extend({
       {
         type: 'input',
         name: 'classname',
-        message: 'Class Name (it will automatically inherit from ' + this.config.get('baseclassname') + ')',
+        message: 'Class Name (it will automatically inherit from ' + this.config.get('baseclassname') + ')'
       },
       {
         type: 'input',
         name: 'namespace',
-        message: 'Namespace (it will automatically be put in namespace' + this.config.get('projectname') + ')',
+        message: 'Namespace (it will automatically be put in namespace' + this.config.get('projectname') + ')'
       }
     ];
 
@@ -34,6 +34,6 @@ module.exports = yeoman.Base.extend({
       this.destinationPath('class.cs'),
       _.merge(this.props, this.config.getAll())
     );
-  },
+  }
 
 });

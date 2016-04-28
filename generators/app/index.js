@@ -16,12 +16,12 @@ module.exports = yeoman.Base.extend({
       {
         type: 'input',
         name: 'projectname',
-        message: 'What is the name of your project? (e.g. MyProject)',
+        message: 'What is the name of your project? (e.g. MyProject)'
       },
       {
         type: 'input',
         name: 'baseclassname',
-        message: 'Base class name? (e.g. MyProjectBehavior)',
+        message: 'Base class name? (e.g. MyProjectBehavior)'
       }
     ];
 
@@ -41,6 +41,6 @@ module.exports = yeoman.Base.extend({
     //   this.templatePath('dummyfile.txt'),
     //   this.destinationPath('dummyfile.txt')
     // );
-  },
+  }
 
 });

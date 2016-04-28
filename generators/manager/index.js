@@ -26,6 +26,6 @@ module.exports = yeoman.Base.extend({
       this.templatePath('dummyfile.txt'),
       this.destinationPath('dummyfile.txt')
     );
-  },
+  }
 
 });
