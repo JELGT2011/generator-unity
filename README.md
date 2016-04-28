@@ -28,7 +28,9 @@ List of subgenerators:
 
 ### app
 
-This is the main generator.  
+This is the main generator.  It scaffolds out a project with:
+ * A base [entity](#entity) class that all interactable `GameObject`s can inherit from
+ * A [GlobalServices](#GlobalServices) object that keeps a references to the built in and user defined [services](#service)
 
 ### class
 
@@ -62,10 +64,22 @@ An entity is attached to a `GameObject` that players can interact with (e.g. a w
 ### UI
 
 
+## Built-In Objects
+
+### GlobalServices
+
+The [GlobalServices](#GlobalServices) object serves as an entry point for [entities](#entity) to use to access the built-in and user defined [services](#service).  All [entities](#entity) can access the [GlobalServices](#service) object by calling `this.Services.MyAwesomeService`, or `this.Services.MyAwesome` (implicitly it is a service).
+
+### InputService
+
+The [InputService](#InputService) provides a wrapper to Unity's built in `Input` static class.
+
+### GameStateService
+
 
 ## License
 
-MIT © [Jason Libbey]()
+MIT © [Jason Libbey](//www.jasonlibbey.com)
 
 
 [npm-image]: https://badge.fury.io/js/generator-unity.svg
